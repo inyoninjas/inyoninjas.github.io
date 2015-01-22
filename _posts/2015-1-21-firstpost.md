@@ -1,3 +1,8 @@
+---
+layout: post
+title: Post 1
+---
+
 # This is first post
 
 * a list
