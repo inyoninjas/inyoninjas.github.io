@@ -18,16 +18,21 @@ Inyo is accessed via AppleScript. It can be invoked from the shell with `osascri
 Try this Inyo [_query_](#query) with customized options.
 
 #### At shell prompt
+
 ```shell
 osascript -e 'tell application "Inyo"' -e 'query  "Please enter a value" windowcolor "red" windowopacity 80 fontcolor "0,255,0" fieldcolor "#0000ff" fieldvalue "a value"' -e 'end tell'
 ```
+
 #### In Script Editor using AppleScript
+
 ```applescript
 tell application "PopForm"
   query "Please enter a value" windowcolor "red" windowopacity 80 fontcolor "0,255,0" fieldcolor "#0000ff" fieldvalue "a value"
 end tell
 ```
+
 #### In Script Editor using [JXA](https://developer.apple.com/library/mac/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/index.html)
+
 ```javascript
 params = {
   windowcolor: 'red',  // Tip: bc is short form for background color
