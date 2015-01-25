@@ -23,24 +23,3 @@ Try this Inyo [_query_](#query) with customized options.
 osascript -e 'tell application "Inyo"' -e 'query  "Please enter a value" windowcolor "red" windowopacity 80 fontcolor "0,255,0" fieldcolor "#0000ff" fieldvalue "a value"' -e 'end tell'
 ```
 
-#### In Script Editor using AppleScript
-
-```applescript
-tell application "PopForm"
-  query "Please enter a value" windowcolor "red" windowopacity 80 fontcolor "0,255,0" fieldcolor "#0000ff" fieldvalue "a value"
-end tell
-```
-
-#### In Script Editor using [JXA](https://developer.apple.com/library/mac/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/index.html)
-
-```javascript
-params = {
-  windowcolor: 'red',  // Tip: bc is short form for background color
-  windowopacity: 80,
-  fontcolor: '0,255,0',
-  fieldcolor: "#0000ff",
-  fieldvalue: "a value"
-}
-Application('Inyo').query('Please enter a value', params)
-// FIXME: there is a bug in this code. The last two fields are ignored
-```
