@@ -59,7 +59,7 @@ params = {
     timer: 10,
     block: false
 }
-pf.notify('INYO', params)
+pf.notify('$KMVAR_inyoMessage', params)
 ```
 
 #### Query
