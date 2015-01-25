@@ -45,7 +45,7 @@ If Inyo crashes when it is the top window, you will need to kill it. `cmd-opt-es
 
 # All the Details
 
-## Notify
+## <a name="notify">Notify</a>
 `notify MESSAGE [modal|m {true|false}] [timer|t TIMEOUT] [background color|bc COLOR] [background opacity|bo {0-100}] [font name|fn NAME] [font color|fc COLOR] [align|a {left,center,right}]`
 
 A _notify_ Inyo is intended for displaying plain-format high-visibility notifications. Some basic formatting is applied to the message text. A notification will be displayed in the largest font size that will not cause text clipping, or excessive line-wrapping (a minimum font size is enforced to ensure text remains visible).
