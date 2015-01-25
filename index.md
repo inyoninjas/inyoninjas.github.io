@@ -19,15 +19,15 @@ Try this Inyo [_query_](#query) with customized options.
 
 #### At shell prompt
 
-~~~
-osascript -e 'tell application "Inyo"' -e 'query  "Please enter a value" windowcolor "red" windowopacity 80 fontcolor "0,255,0" fieldcolor "#0000ff" fieldvalue "a value"' -e 'end tell'
-~~~
+```shellscript
+osascript -e 'tell application "Inyo"' -e 'query  "Enter your name" windowcolor "red" windowopacity 40 inputcolor "#0000ff" inputplaceholder "first name" focus true' -e 'end tell'
+```
 
 #### In Script Editor using AppleScript
 
 ```applescript
-tell application "PopForm"
-  query "Please enter a value" windowcolor "red" windowopacity 80 fontcolor "0,255,0" fieldcolor "#0000ff" fieldvalue "a value"
+tell application "Inyo"
+  query "Enter your name" windowcolor "red" windowopacity 40 inputplaceholder "first name" focus true
 end tell
 ```
 
@@ -35,13 +35,12 @@ end tell
 
 ```javascript
 params = {
-  windowcolor: 'red',  // Tip: bc is short form for background color
-  windowopacity: 80,
-  fontcolor: '0,255,0',
-  fieldcolor: "#0000ff",
-  fieldvalue: "a value"
+  windowcolor: 'red',
+  windowopacity: 40,
+  inputplaceholder: "first name",
+  focus: true
 }
-Application('Inyo').query('Please enter a value', params)
+Application('Inyo').query('Enter your name', params)
 // FIXME: there is a bug in this code. The last two fields are ignored
 ```
 
