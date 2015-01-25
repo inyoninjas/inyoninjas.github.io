@@ -17,7 +17,7 @@ Content formatting can range from simple plain text, to markdown or full html. I
 
 Inyo is accessed via AppleScript. It can be invoked from the shell with `osascript`, run from Script Editor (or valid saved file formats - `.applescript`, `.scpt`, etc) or accessed with any application that can call AppleScript.
 
-Try this Inyo [_query_](#query) with customized options (it should look like <a href="images/maschine.png" data-lightbox="image-1" data-title="My caption">this</a>).
+Try this Inyo [_query_](documentation.html#query) with customized options (it should look like <a href="images/maschine.png" data-lightbox="image-1" data-title="My caption">this</a>).
 
 #### At shell prompt
 
@@ -49,7 +49,7 @@ Application('Inyo').query('Enter your name', params)
 ## Additional Examples
 
 #### Notification
-This uses **notify** to display a message. This example is triggered from Keyboard Maestro and shows the current battery percentage (check out this blog post for more details on this specific example).
+This uses [_notify_](documentation.html#notify) to display a message. This example is triggered from Keyboard Maestro and shows the current battery percentage (check out this blog post for more details on this specific example).
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
 
 ```javascript
