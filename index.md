@@ -12,7 +12,10 @@ Inyo is a scriptable (AppleScript) dialog utility optimized for high-visibility 
 
 Content formatting can range from simple plain text, to markdown or full html. Inyo was inspired from (the awesome) [Alfred](http://www.alfredapp.com/), and its "Large Type" functionality, but we added **all** the bells and whistles.
 
-### Quick Example (it should look like [this](https://cloud.githubusercontent.com/assets/968047/5717560/93be41ac-9ab7-11e4-8d4d-d84a20c25a64.png))
+
+
+## Quick Example
+(it should look like <a href="images/maschine.png" data-lightbox="image-1" data-title="My caption">this</a>)
 Inyo is accessed via AppleScript. It can be invoked from the shell with `osascript`, run from Script Editor (or valid saved file formats - `.applescript`, `.scpt`, etc) or accessed with any application that can call AppleScript.
 Try this Inyo [_query_](#query) with customized options.
 
@@ -42,7 +45,8 @@ params = {
 Application('Inyo').query('Enter your name', params)
 ```
 
-### Additional Examples
+
+## Additional Examples
 
 #### Notification
 
