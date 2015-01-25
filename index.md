@@ -19,7 +19,7 @@ Try this Inyo [_query_](#query) with customized options.
 
 #### At shell prompt
 
-```shellscript
+```sh
 osascript -e 'tell application "Inyo"' -e 'query  "Enter your name" windowcolor "red" windowopacity 40 inputcolor "#0000ff" inputplaceholder "first name" focus true' -e 'end tell'
 ```
 
