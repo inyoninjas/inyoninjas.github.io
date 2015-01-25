@@ -10,8 +10,7 @@ Inyo is a scriptable (AppleScript) dialog utility optimized for high-visibility 
 * display an external webpage
 * kiosk mode (with text and input fields formatted large)
 
-Content formatting can range from simple plain text, to markdown or full html. Inyo was inspired from (the awesome) [Alfred](http://www.alfredapp.com/), and its "Large Type" functionality, but we added **all** the bells and whistles.
-
+Content formatting can range from simple plain text, to markdown or full html. Inyo was inspired from (the awesome) [Alfred](http://www.alfredapp.com/), and its "Large Type" functionality, but we added **ALL** the bells and whistles.
 
 
 ## Quick Example
@@ -50,14 +49,39 @@ Application('Inyo').query('Enter your name', params)
 ## Additional Examples
 
 #### Notification
-
+This is just a simple notification.
+<a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+```
+code
+```
 
 #### Query
+Get prompted for input.
+<a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+```
+code
+```
 
 
 #### HTML Page
-<a href="images/maschine.png" data-lightbox="image-1" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+Display an html page
+<a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+```
+code
+```
 
 #### HTML Form
+Build a full user input query page
+<a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+```
+code
+```
 
-<a href="images/maschine.png" data-lightbox="image-1" data-title="how much data can I cram into the caption - can I have a really long description and it will just warp around? How will this work?"><img src="images/maschine_thumbnail.png"/></a>
+#### Whacky Mode
+Want bugs crawling on your screen?
+<a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+```
+code
+```
+
+Bugs crawling on the screen....
