@@ -73,18 +73,21 @@ Set alignment of notification text.
 ### Examples
 #### Simple
 A simple notification.
+
 ```sh
 osascript -e 'tell application "Inyo"' -e 'notify "Alert!"' -e 'end tell'
 ```
 
 #### Non-modal
 A non-modal notification [[screenshot](http://puturlhere)].
+
 ```sh
 osascript -e 'tell application "Inyo"' -e 'notify "Non-Modal!" modal false' -e 'end tell'
 ```
 
 #### All Fancy
 Customized notification having a partial transparent red background and blue Times-Roman text.
+
 ```sh
 osascript -e 'tell application "Inyo"' -e 'notify "This is BLUE" background color "red" background opacity 80 font color "0,0,255" font name "Times-Roman"' -e 'end tell'
 ```
@@ -130,18 +133,21 @@ All content in the data entry field is returned to the caller.
 ### Examples
 #### Simple
 A simple query.
+
 ```sh
 osascript -e 'tell application "Inyo"' -e 'query "Enter something"' -e 'end tell'
 ```
 
 #### Custom Field Value and Length
 A customized entry field with a preset value and increased width.
+
 ```sh
 osascript -e 'tell application "Inyo"' -e 'query "Enter something" field value "something something something" field width 32' -e 'end tell'
 ```
 
 #### All Fancy
 A customized entry field with black background, decreased width and white, non-proportional text.
+
 ```sh
 osascript -e 'tell application "Inyo"' -e 'query "Enter (white)" field value "WHITE" field font color "white" field color "black" field width 10 font name "Courier"' -e 'end tell'
 ```
@@ -171,6 +177,7 @@ Percentage opacity of background, where 100 represents complete opacity, and 0 i
 
 ### Result
 The data from all form elements are encoded as a contiguous sequence of pipe-delimited `name=value` pairs. For instance, the following HTML document
+
 ```html
 <body style='color:white;font-size:64'>
   Radio 1 <input name='radio1' type='radio' value='1'/><br>
@@ -187,28 +194,39 @@ The data from all form elements are encoded as a contiguous sequence of pipe-del
   </select>
 </body>
 ```
+
 produces the output
+
 ```
 input1=input #1|input2=input #2|radio1=2|checkbox1=off|select1=selection 1|
 texarea1=text from textarea #1|texarea2=text from textarea #2
 ```
+
 ### Examples
+
 #### Simple
 An html Inyo using parameter-supplied HTML content.
+
 ```sh
 osascript -e 'tell application "Inyo"' -e 'html "<h1>HTML dialog!</h1>"' -e 'end tell'
 ```
+
 #### Local document
 An html Inyo using an HTML document loaded from the local filesystem.
+
 ```sh
 osascript -e 'tell application "Inyo"' -e 'html "~/username/Documents/index.html"' -e 'end tell'
 ```
+
 #### Remote document
 An html Inyo using an HTML document loaded from a web service.
+
 ```sh
 osascript -e 'tell application "Inyo"' -e 'html "http://www.apple.com/"' -e 'end tell'
 ```
+
 Same thing using AppleScript
+
 ```applescript
 tell application "Inyo"
   html "http://www.apple.com" lt 10

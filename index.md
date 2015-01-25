@@ -52,8 +52,7 @@ Application('Inyo').query('Enter your name', params)
 This uses **notify** to display a message. This example is triggered from Keyboard Maestro and shows the current battery percentage (check out this blog post for more details on this specific example).
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
 
-```sh
-osascript -l JavaScript << SCRIPT
+```javascript
 pf = Application('Inyo')
 params = {
     windowcolor: 'orange',
@@ -61,12 +60,12 @@ params = {
     block: false
 }
 pf.notify('INYO', params)
-SCRIPT
 ```
 
 #### Query
 This uses **query** to prompt for input. This example is triggered from Keyboard Maestro and prompts the user for input (check out this blog post for more details on this specific example).
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+
 ```
 code
 ```
@@ -75,6 +74,7 @@ code
 #### HTML Page
 This uses **notify** to display an external url.
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+
 ```
 code
 ```
@@ -82,6 +82,7 @@ code
 #### HTML Form
 This uses **query** to present an HTML form. Using HTML in conjunction with **query** allows for the creation of sophisticated forms with numerous form elements.
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+
 ```
 code
 ```
@@ -89,6 +90,7 @@ code
 #### Bugs on your screen
 This uses **notify** to display an HTML page which loads the javascript library, [Bug](http://auz.github.io/Bug/). We cannot vouch that this has much utility, but it does illustrate Inyo's potential for creative hacking.
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+
 ```
 code
 ```
