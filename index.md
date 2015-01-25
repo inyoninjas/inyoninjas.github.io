@@ -10,7 +10,7 @@ Inyo is a scriptable (AppleScript) dialog utility optimized for high-visibility 
 * display an external webpage
 * kiosk mode (with text and input fields formatted large)
 
-Content formatting can range from simple plain text, to markdown or full html. If you have used the awesome [Alfred](http://www.alfredapp.com/), Inyo was inspired from its "Large Type" functionality, but we added **all** the bells and whistles.
+Content formatting can range from simple plain text, to markdown or full html. Inyo was inspired from (the awesome) [Alfred](http://www.alfredapp.com/), and its "Large Type" functionality, but we added **all** the bells and whistles.
 
 ### Quick Example (it should look like [this](https://cloud.githubusercontent.com/assets/968047/5717560/93be41ac-9ab7-11e4-8d4d-d84a20c25a64.png))
 Inyo is accessed via AppleScript. It can be invoked from the shell with `osascript`, run from Script Editor (or valid saved file formats - `.applescript`, `.scpt`, etc) or accessed with any application that can call AppleScript.
@@ -55,6 +55,4 @@ Application('Inyo').query('Enter your name', params)
 
 #### HTML Form
 
-<p>
 <a href="images/maschine.png" data-lightbox="image-1" data-title="My caption"><img src="images/maschine_thumbnail.png"/></a>
-</p>
