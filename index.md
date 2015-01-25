@@ -51,6 +51,7 @@ Application('Inyo').query('Enter your name', params)
 #### Notification
 This uses **notify** to display a message. This example is triggered from Keyboard Maestro and shows the current battery percentage (check out this blog post for more details on this specific example).
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
+
 ```sh
 osascript -l JavaScript << SCRIPT
 pf = Application('Inyo')
