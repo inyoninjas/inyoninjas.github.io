@@ -15,9 +15,10 @@ Content formatting can range from simple plain text, to markdown or full html. I
 
 
 ## Quick Example
-(it should look like <a href="images/maschine.png" data-lightbox="image-1" data-title="My caption">this</a>)
+
 Inyo is accessed via AppleScript. It can be invoked from the shell with `osascript`, run from Script Editor (or valid saved file formats - `.applescript`, `.scpt`, etc) or accessed with any application that can call AppleScript.
-Try this Inyo [_query_](#query) with customized options.
+
+Try this Inyo [_query_](#query) with customized options. [it should look like <a href="images/maschine.png" data-lightbox="image-1" data-title="My caption">this</a>]
 
 #### At shell prompt
 
@@ -55,8 +56,8 @@ Application('Inyo').query('Enter your name', params)
 
 
 #### HTML Page
-
+<a href="images/maschine.png" data-lightbox="image-1" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
 
 #### HTML Form
 
-<a href="images/maschine.png" data-lightbox="image-1" data-title="My caption"><img src="images/maschine_thumbnail.png"/></a>
+<a href="images/maschine.png" data-lightbox="image-1" data-title="how much data can I cram into the caption - can I have a really long description and it will just warp around? How will this work?"><img src="images/maschine_thumbnail.png"/></a>
