@@ -17,7 +17,7 @@ Content formatting can range from simple plain text, to markdown or full html. I
 
 Inyo is accessed via AppleScript. It can be invoked from the shell with `osascript`, run from Script Editor (or valid saved file formats - `.applescript`, `.scpt`, etc) or accessed with any application that can call AppleScript.
 
-Try this Inyo [_query_](#query) with customized options. [it should look like <a href="images/maschine.png" data-lightbox="image-1" data-title="My caption">this</a>]
+Try this Inyo [_query_](#query) with customized options (it should look like <a href="images/maschine.png" data-lightbox="image-1" data-title="My caption">this</a>).
 
 #### At shell prompt
 
@@ -49,14 +49,22 @@ Application('Inyo').query('Enter your name', params)
 ## Additional Examples
 
 #### Notification
-This is just a simple notification.
+This uses **notify** to display a message. This example is triggered from Keyboard Maestro and shows the current battery percentage (check out this blog post for more details on this specific example).
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
-```
-code
+```sh
+osascript -l JavaScript << SCRIPT
+pf = Application('Inyo')
+params = {
+    windowcolor: 'orange',
+    timer: 10,
+    block: false
+}
+pf.notify('INYO', params)
+SCRIPT
 ```
 
 #### Query
-Get prompted for input.
+This uses **query** to prompt for input. This example is triggered from Keyboard Maestro and prompts the user for input (check out this blog post for more details on this specific example).
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
 ```
 code
@@ -64,21 +72,21 @@ code
 
 
 #### HTML Page
-Display an html page
+This uses **notify** to display an external url.
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
 ```
 code
 ```
 
 #### HTML Form
-Build a full user input query page
+This uses **query** to present an HTML form. Using HTML in conjunction with **query** allows for the creation of sophisticated forms with numerous form elements.
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
 ```
 code
 ```
 
-#### Whacky Mode
-Want bugs crawling on your screen?
+#### Bugs on your screen
+This uses **notify** to display an HTML page which loads the javascript library, [Bug](http://auz.github.io/Bug/). We cannot vouch that this has much utility, but it does illustrate Inyo's potential for creative hacking.
 <a href="images/maschine.png" data-lightbox="image-2" data-title="h"><img src="images/maschine_thumbnail.png"/></a>
 ```
 code
