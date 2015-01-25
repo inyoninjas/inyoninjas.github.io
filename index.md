@@ -2,19 +2,18 @@
 layout: default
 ---
 
-Inyo is a scriptable (AppleScript) dialog utility optimized for high-visibility messaging and data entry. Inyo's display is a full-screen, modal "overlay" that requires you to intentionally acknowledge notifications or requests for input (hence "in yo' face" - btw, [icon = inyo](#icon)). Example use cases:
+Inyo is a scriptable (AppleScript) dialog utility optimized for high-visibility messaging and data entry. Inyo's display is a full-screen, modal "overlay" that requires you to intentionally acknowledge notifications or input requests (hence "in yo' face" - btw, [icon = inyo](#icon)). Example use cases:
 
 * full screen notification
-* prompt for field input
+* prompt for user input
 * I/O for a custom workflow
-* pop an external webpage
+* display an external webpage
 * kiosk mode (with text and input fields formatted large)
 
-Formatting can range from simple plain text, to markdown or full html. If you have used the awesome [Alfred](http://www.alfredapp.com/), this is essentially "Large Type", with **all** the bells and whistles.
+Content formatting can range from simple plain text, to markdown or full html. If you have used the awesome [Alfred](http://www.alfredapp.com/), Inyo was inspired from its "Large Type" functionality, but we added **all** the bells and whistles.
 
-### Quick Example
-(it should look like [this](https://cloud.githubusercontent.com/assets/968047/5717560/93be41ac-9ab7-11e4-8d4d-d84a20c25a64.png))
-Inyo is accessed via AppleScript. It can be invoked from the shell with `osascript`, run from Script Editor (or valid saved file formats - `.applescript`, `.scpt`, etc) or accessed in any application that can call AppleScript.
+### Quick Example (it should look like [this](https://cloud.githubusercontent.com/assets/968047/5717560/93be41ac-9ab7-11e4-8d4d-d84a20c25a64.png))
+Inyo is accessed via AppleScript. It can be invoked from the shell with `osascript`, run from Script Editor (or valid saved file formats - `.applescript`, `.scpt`, etc) or accessed with any application that can call AppleScript.
 Try this Inyo [_query_](#query) with customized options.
 
 #### At shell prompt
@@ -41,7 +40,21 @@ params = {
   focus: true
 }
 Application('Inyo').query('Enter your name', params)
-// FIXME: there is a bug in this code. The last two fields are ignored
 ```
 
+### Additional Examples
 
+#### Notification
+
+
+#### Query
+
+
+#### HTML Page
+
+
+#### HTML Form
+
+<p>
+<a href="images/maschine.png" data-lightbox="image-1" data-title="My caption"><img src="images/maschine_thumbnail.png"/></a>
+</p>
