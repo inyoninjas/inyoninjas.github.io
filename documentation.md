@@ -73,19 +73,19 @@ Set alignment of notification text.
 ### Examples
 #### Simple
 A simple notification.
-```shell
+```sh
 osascript -e 'tell application "Inyo"' -e 'notify "Alert!"' -e 'end tell'
 ```
 
 #### Non-modal
 A non-modal notification [[screenshot](http://puturlhere)].
-```shell
+```sh
 osascript -e 'tell application "Inyo"' -e 'notify "Non-Modal!" modal false' -e 'end tell'
 ```
 
 #### All Fancy
 Customized notification having a partial transparent red background and blue Times-Roman text.
-```shell
+```sh
 osascript -e 'tell application "Inyo"' -e 'notify "This is BLUE" background color "red" background opacity 80 font color "0,0,255" font name "Times-Roman"' -e 'end tell'
 ```
 
@@ -94,7 +94,7 @@ osascript -e 'tell application "Inyo"' -e 'notify "This is BLUE" background colo
 
 A `query` Inyo is intended for gathering user input with a plain-format prompt and single data entry field. The prompt message will be displayed in the largest font size that will not cause text clipping, or excessive line-wrapping (a minimum font size is enforced to ensure text remains visible). This Inyo type is always modal. Data is returned to the script caller exactly as it is entered in the text field.
 
-```shell
+```sh
 osascript -e 'tell application "Inyo"' -e 'query "Enter value" background color "red" background opacity 80 font color "0,255,0" field color "#0000ff" default value "default value" font name "Times-Roman"' -e 'end tell'
 ```
 
@@ -130,19 +130,19 @@ All content in the data entry field is returned to the caller.
 ### Examples
 #### Simple
 A simple query.
-```shell
+```sh
 osascript -e 'tell application "Inyo"' -e 'query "Enter something"' -e 'end tell'
 ```
 
 #### Custom Field Value and Length
 A customized entry field with a preset value and increased width.
-```shell
+```sh
 osascript -e 'tell application "Inyo"' -e 'query "Enter something" field value "something something something" field width 32' -e 'end tell'
 ```
 
 #### All Fancy
 A customized entry field with black background, decreased width and white, non-proportional text.
-```shell
+```sh
 osascript -e 'tell application "Inyo"' -e 'query "Enter (white)" field value "WHITE" field font color "white" field color "black" field width 10 font name "Courier"' -e 'end tell'
 ```
 
@@ -195,17 +195,17 @@ texarea1=text from textarea #1|texarea2=text from textarea #2
 ### Examples
 #### Simple
 An html Inyo using parameter-supplied HTML content.
-```shell
+```sh
 osascript -e 'tell application "Inyo"' -e 'html "<h1>HTML dialog!</h1>"' -e 'end tell'
 ```
 #### Local document
 An html Inyo using an HTML document loaded from the local filesystem.
-```shell
+```sh
 osascript -e 'tell application "Inyo"' -e 'html "~/username/Documents/index.html"' -e 'end tell'
 ```
 #### Remote document
 An html Inyo using an HTML document loaded from a web service.
-```shell
+```sh
 osascript -e 'tell application "Inyo"' -e 'html "http://www.apple.com/"' -e 'end tell'
 ```
 Same thing using AppleScript
