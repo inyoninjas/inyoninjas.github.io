@@ -55,20 +55,18 @@ A _notify_ Inyo is intended for displaying plain-format high-visibility notifica
 Specifies the plain-text format message to be displayed. Other than line breaks, which can be specified directly as linefeed characters or encoded as '`\n`', the contents of `MESSAGE` are displayed literally.
 
 ### Options
-* `modal|m {true|false}` (default: _true_)
-When set _true_, the utility will not relinquish control to the caller until the user has dismissed the notification (e.g. left-mouse click).
-* `timer|t TIMEOUT`
-Dialog will automatically dismiss itself after TIMEOUT seconds. A timer will be displayed in the lower right-hand corner.
-* `background color|bc COLOR` (default: _black_)
-Background color, where `COLOR` may be specified as a system catalog color name (e.g. red) or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
-* `background opacity|bo OPACITY` (default: _80_)
-Percentage opacity of background, where 100 represents complete opacity, and 0 is completely transparent.
-* `font name|fn NAME` (default: _system font_)
-Font used to display notification text.
-* `font color|fc COLOR` (default: _white_)
-Font color used to display notification text, where `COLOR` may be specified as a system catalog color (e.g. red), or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
-* `align|a {left,center,right}` (default: _left_)
-Set alignment of notification text.
+
+* `[display: text]` : (default: active) Select the display screen. "Active" is the screen with the current active application. "Mouse" is the screen where the mouse is. "NUMBER" refers to a specific screen.
+* `[screensaver: boolean]` : (default: false) Window will position over the top of screensaver (or login) screen.
+* `[timer: integer]` : Dialog will automatically dismiss itself after specificed time (in seconds).
+* `[windowcolor: text]` : (default: black) Window color - specified as a system catalog color name (e.g. red) or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
+* `[windowopacity: integer]` : Percentage opacity of background, where 100 represents complete opacity, and 0 is completely transparent.
+* `[block: boolean]` : (default: true) Calling source waits for response (conversely, "fire and forget")
+* `[fontalign: text]` : (default: center) Set alignment of notification text.
+* `[fontcolor: text]` : (default: black) Font color used to display notification text, where `COLOR` may be specified as a system catalog color (e.g. red), or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
+* `[fontname: text]` : (default: system font) Font used to display notification text.
+* `[fontsize: integer]` : (default: autosized) Font size to display notification text.
+* `[loadtimeout: integer]` : (default: 10) Time (in seconds) to allow html page to load.
 
 ### Examples
 #### Simple
@@ -127,29 +125,6 @@ Specifies the plain-text format message to be displayed. Other than line breaks,
 * `[submit: boolean]` : (default: false) NOTE: need to finish this description
 * `[json: boolean]` : (default: false). Mutli-value response is "|" delimted. If set to true, output is formatted as JSON.
 → text : result
-
-
-
-* `timer|t TIMEOUT`
-Dialog will automatically dismiss itself after TIMEOUT seconds. A timer will be displayed in the lower right-hand corner.
-* `field value VALUE`
-Default entry field value. Entry field is pre-populated with contents of `VALUE`.
-* `field width WIDTH` (default: _16_)
-Width of data entry field, measured in character units.
-* `field color COLOR` (default: _white_)
-Field background color, where `COLOR` may be specified as a system catalog color name (e.g. red) or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
-* `field font color COLOR` (default: _black_)
-Field font color, where `COLOR` may be a system catalog color name (e.g. red) or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
-* `background color|bc COLOR` (default: _black_)
-Background color, where `COLOR` may be specified as a system catalog color name (e.g. red) or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
-* `background opacity|bo OPACITY` (default: _80_)
-Percentage opacity of background, where 100 represents complete opacity, and 0 complete transparency.
-* `font name|fn NAME` (default: _current system font_)
-Font used to display notification text (e.g. HelveticaNeue, Times, Courier). Note: `NAME` must refer to font's PostScript name (_Font Book_ system utility exposes this information).
-* `font color|fc COLOR` (default: _white_)
-Font color used to display notification text, where `COLOR` may be specified as a system catalog color (e.g. red), or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
-* `align|a {left,center,right}` (default: _left_)
-Set alignment of prompt text.
 
 ### Result
 All content in the data entry field is returned to the caller.
