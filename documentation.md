@@ -106,6 +106,30 @@ osascript -e 'tell application "Inyo"' -e 'query "Enter value" background color 
 Specifies the plain-text format message to be displayed. Other than line breaks, which can be specified directly as linefeed characters or encoded as '`\n`', the contents of `PROMPT` are displayed literally.
 
 ### Options
+
+* `[focus: boolean]` : (default: false). Set to true to focus keystrokes on input fields immediately. Otherwise, focus requires a mouse click on input field.
+* `[display: text]` : (default: active) Select the display screen. "Active" is the screen with the current active application. "Mouse" is the screen where the mouse is. "NUMBER" refers to a specific screen.
+* `[screensaver: boolean]` : (default: false) Window will position over the top of screensaver (or login) screen.
+* `[timer: integer]` : Dialog will automatically dismiss itself after specificed time (in seconds).
+* `[windowcolor: text]` : (default: black) Window color - specified as a system catalog color name (e.g. red) or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
+* `[windowopacity: integer]` : Percentage opacity of background, where 100 represents complete opacity, and 0 is completely transparent.
+* `[fontalign: text]` : (default: center) Set alignment of text.
+* `[fontname: text]` : (default: system font) Font used to display notification text.
+* `[fontsize: integer]` : (default: autosized) Font size to display notification text.
+* `[fontcolor: text]` : (default: black) Font color used to display notification text, where `COLOR` may be specified as a system catalog color (e.g. red), or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
+* `[inputmaxlength: integer]` : Maximum allowable characters.
+* `[inputplaceholder: text]` : Text to display as prompt for input.
+* `[inputvalue: text]` : Default string in input field.
+* `[inputsize: integer]` : Width of input box in characters.
+* `[inputcolor: text]` : Background color of input field, where `COLOR` may be specified as a system catalog color (e.g. red), or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
+* `[inputfontcolor: text]` : (default: black) Font color used to display notification text, where `COLOR` may be specified as a system catalog color (e.g. red), or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
+* `[loadtimeout: integer]` : (default: 10) Time (in seconds) to allow html page to load.
+* `[submit: boolean]` : (default: false) NOTE: need to finish this description
+* `[json: boolean]` : (default: false). Mutli-value response is "|" delimted. If set to true, output is formatted as JSON.
+→ text : result
+
+
+
 * `timer|t TIMEOUT`
 Dialog will automatically dismiss itself after TIMEOUT seconds. A timer will be displayed in the lower right-hand corner.
 * `field value VALUE`
