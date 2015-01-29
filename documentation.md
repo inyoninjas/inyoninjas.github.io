@@ -56,7 +56,13 @@ Specifies the plain-text format message to be displayed. Other than line breaks,
 
 ### Options
 
-* ```[display: text]``` : (default: active) Select the display screen. "Active" is the screen with the current active application. "Mouse" is the screen where the mouse is. "NUMBER" refers to a specific screen.
+```sh
+[display: text]
+```
+
+(default: active)
+Select the display screen. "Active" is the screen with the current active application. "Mouse" is the screen where the mouse is. "NUMBER" refers to a specific screen.
+
 * `[screensaver: boolean]` : (default: false) Window will position over the top of screensaver (or login) screen.
 * `[timer: integer]` : Dialog will automatically dismiss itself after specificed time (in seconds).
 * `[windowcolor: text]` : (default: black) Window color - specified as a system catalog color name (e.g. red) or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
