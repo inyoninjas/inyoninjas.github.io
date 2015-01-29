@@ -56,13 +56,7 @@ Specifies the plain-text format message to be displayed. Other than line breaks,
 
 ### Options
 
-```sh
-[display: text]
-```
-
-(default: active)
-Select the display screen. "Active" is the screen with the current active application. "Mouse" is the screen where the mouse is. "NUMBER" refers to a specific screen.
-
+`[display: text]` : (default: active) Select the display screen. "Active" is the screen with the current active application. "Mouse" is the screen where the mouse is. "NUMBER" refers to a specific screen.
 * `[screensaver: boolean]` : (default: false) Window will position over the top of screensaver (or login) screen.
 * `[timer: integer]` : Dialog will automatically dismiss itself after specificed time (in seconds).
 * `[windowcolor: text]` : (default: black) Window color - specified as a system catalog color name (e.g. red) or as an RGB triplet encoded hexadecimally (e.g. #00ff00) or decimally (e.g. 128,128,128).
@@ -96,7 +90,7 @@ Customized notification having a partial transparent red background and blue Tim
 osascript -e 'tell application "Inyo"' -e 'notify "This is BLUE" background color "red" background opacity 80 font color "0,0,255" font name "Times-Roman"' -e 'end tell'
 ```
 
-## Query
+## <a name="query">Query</a>
 `query PROMPT [timer|t TIMEOUT] [field value VALUE] [field width WIDTH] [field color COLOR] [field font color COLOR] [background color|bc COLOR] [background opacity|bo {0-100}] [font name|fn NAME] [font color|fc COLOR] [align|a {left,center,right}]`
 
 A `query` Inyo is intended for gathering user input with a plain-format prompt and single data entry field. The prompt message will be displayed in the largest font size that will not cause text clipping, or excessive line-wrapping (a minimum font size is enforced to ensure text remains visible). This Inyo type is always modal. Data is returned to the script caller exactly as it is entered in the text field.
