@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Inyo is a scriptable (AppleScript) dialog utility optimized for high-visibility messaging and data entry. Inyo's display is a full-screen, modal "overlay" that requires you to intentionally acknowledge notifications or input requests (hence "in yo' face" - btw, [icon = inyo](#icon)). Example use cases:
+Inyo is a scriptable (AppleScript) window dialog utility optimized for high-visibility messaging and data entry. Inyo's display is a full-screen, modal "overlay" that requires you to intentionally acknowledge notifications or input requests (hence "in yo' face" - btw, [icon = inyo](#icon)). In the documetnation, we refer to a window as an "Inyo" (it makes it much easier to talk about). Example use cases:
 
 * full screen notification
 * prompt for user input

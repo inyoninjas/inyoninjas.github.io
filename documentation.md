@@ -6,19 +6,17 @@ layout: default
 NOTE: this section needs editing
 
 #### Inyo Types
-* [**notify**](#notify) - plain-text, read-only notification dialog
-* [**query**](#query) - plain-text, data entry dialog
-* [**html**](#html) - HTML-format dialog, for notification or data entry
-Colloquially, one would refer to a "**notify** inyo".
+* [**notify**](#notify) - plain-text/html, read-only notification window
+* [**inquire**](#inquire) - plain-text/html, data entry window
 
-#### "Dismissing" Inyo
-All inyos are modal and can be dismissed with a `left-mouse` click, the `Return` or `Escape` key, or the `Submit` button. Input-enabled inyos (e.g. [_query_](#query), or [_html_](#html)) will only return data entered by the user if dismissed with `Return` or `Submit`.
+#### "Dismissing" an Inyo
+All inyos are modal and can be dismissed with a `left-mouse` click, the `return` or `esc` key, or the `Submit` button. Input-enabled inyos (e.g. [_query_](#query), or [_html_](#html)) will only return data entered by the user if dismissed with `return` or `Submit`. If there are multiple Inyos queued up, you can clear the whole queue with `cmd+esc`.
 
 #### Keyboard Focus
 Inyo is an "overlay" on top of your existing desktop. With a **notify** inyo, keyboard focus remains with the application that was active when the inyo popped. If the Inyo window is transparent enough, you will still be able to see the active app and continue to type away on your document! A couple of exceptions - Inyo is always listening for the `esc` and `return` keys, as it uses them to dismiss/submit its window. Also, **query** and **html** (if it has input elements) grab keyboard focus and direct it to input fields/controls.
 
 #### Formatting
-You have lots of options for formatting. For **notify**/**query** inyos, text is autosized to fit on the screen - less text, bigger font. There are default option values for font, color, opacity, alignment, etc. In general, we have used the same format tag names as html (specific details below). For an **html** inyo, formatting is wide open, including complete control over text/font/layout (caveats apply - dicussed more below).
+You have lots of options for formatting. For **notify**/**query** inyos, text is autosized to fit on the screen - less text, bigger font. There are default option values for font, color, opacity, alignment, etc. For an **html** inyo, formatting is wide open, including complete control over text/font/layout (caveats apply - dicussed more below).
 
 #### Options
 Each type has a collection of available options. The [Quick Example](quick example) shows how those options are appended to the overall AppleScript command - syntax veries dramatically between osascript, AppleScript and JXA. Pick your poison. For example, JXA allows you to create organized array of properties as an alternative to a long, complicated command string.
@@ -27,10 +25,13 @@ Each type has a collection of available options. The [Quick Example](quick examp
 We have given you a big ol' coil of rope here. You can use html to format your content, including input controls. Behind the scenes we are using WebKit window. However, because this isn't an actual browser, there is likely html and css that will be entirely broken. We have inlcuded a couple of examples that work. If you extrapolate from those examples, no promises made about expected functionality.
 
 #### Timeout
-In general, intended behavior is to explicilty dismiss a window. However, there are use cases where a timed presentation of content is preferrable. The ``timer|t TIMEOUT` option will display a window for a designated time - then, poof, the window disappears.
+In general, intended behavior is to explicitly dismiss a window. However, there are use cases where a timed presentation of content is preferrable. The ``timer TIMEOUT` option will display a window for a designated time - then, poof, the window disappears.
 
 #### Returned Data
 Returned data is blah, blah. You will have to parse it. blah, blah
+
+#### Queue
+Inyos queue up.
 
 #### History
 Not yet implemented
@@ -91,9 +92,10 @@ Customized notification having a partial transparent red background and blue Tim
 osascript -e 'tell application "Inyo"' -e 'notify "This is BLUE" background color "red" background opacity 80 font color "0,0,255" font name "Times-Roman"' -e 'end tell'
 ```
 
-## <a name="query">Query</a>
-`query PROMPT [timer|t TIMEOUT] [field value VALUE] [field width WIDTH] [field color COLOR] [field font color COLOR] [background color|bc COLOR] [background opacity|bo {0-100}] [font name|fn NAME] [font color|fc COLOR] [align|a {left,center,right}]`
+## <a name="inquire">Inquire</a>
+`inquire PROMPT [timer|t TIMEOUT] [field value VALUE] [field width WIDTH] [field color COLOR] [field font color COLOR] [background color|bc COLOR] [background opacity|bo {0-100}] [font name|fn NAME] [font color|fc COLOR] [align|a {left,center,right}]`
 
+Label text, HTML or path/URL to HTML. Line breaks ("\n") are respected.
 A `query` Inyo is intended for gathering user input with a plain-format prompt and single data entry field. The prompt message will be displayed in the largest font size that will not cause text clipping, or excessive line-wrapping (a minimum font size is enforced to ensure text remains visible). This Inyo type is always modal. Data is returned to the script caller exactly as it is entered in the text field.
 
 ```sh
